@@ -1,0 +1,33 @@
+.cards {
+  width: 880px;
+  margin: auto 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.card {
+  width: 282px;
+  height: 361px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.card__image {
+  border-radius: 10px 10px 0 0;
+}
+
+.card__group {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px 0 21px;
+}
+
+.card__title {
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}

@@ -1,31 +1,3 @@
-body {
-  background-color: black;
-}
-
-p {
-  color: white;
-}
-
-.header {
-  width: 880px;
-  display: flex;
-  flex-direction: column;
-  margin: 45px auto 0;
-}
-
-.header__logo {
-  width: 173px;
-  height: 33px;
-  margin-bottom: 41px;
-}
-
-.header__line {
-  width: 880px;
-  height: 1px;
-  opacity: 0.7;
-  background: #545454;
-}
-
 .profile {
   margin: 40px auto;
   width: 880px;
@@ -46,7 +18,7 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 5px;
   margin: 22px 165px 21px 0;
 }
 

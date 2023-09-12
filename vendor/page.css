@@ -1,0 +1,19 @@
+body {
+  background-color: #000;
+  margin: auto;
+  max-width: 1280px;
+  font-family: "Inter";
+}
+
+p,
+h1 {
+  color: #fff;
+}
+
+h2 {
+  color: #000;
+}
+
+image {
+  width: 100%;
+}
