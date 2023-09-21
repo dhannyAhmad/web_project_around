@@ -17,3 +17,15 @@ h2 {
 image {
   width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1.75rem 4rem 2.25rem;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  body {
+    padding: 0 1.2rem;
+  }
+}

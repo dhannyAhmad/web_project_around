@@ -17,3 +17,18 @@
   opacity: 0.7;
   background: #545454;
 }
+@media (max-width: 768px) {
+  /* Mengubah lebar header pada resolusi kecil */
+  .header,
+  .header__line {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .header__logo {
+    width: 126px;
+    height: 24px;
+    margin-bottom: 32px;
+  }
+}
