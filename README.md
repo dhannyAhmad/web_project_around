@@ -2,10 +2,13 @@
 
 Project Feature
 
-#simentical HTML
-#DOM (Document Object Model)
-#Responsive Design
-#CSS Flexbox & flex
+<ul>
+  <li>simentical HTML</li>
+  <li>DOM (Document Object Model)</li>
+  <li>Responsive Design</li>
+  <li>CSS Flexbox & flex
+  </li>
+</ul>
 
 # <h1>Figma</h1>
 
