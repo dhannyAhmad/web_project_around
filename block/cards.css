@@ -2,7 +2,6 @@
   width: 880px;
   margin: auto;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
@@ -48,10 +47,17 @@
   background-image: url(../images/icon/like-button.svg);
   cursor: pointer;
   background-repeat: no-repeat;
+  background-image: cover;
   background-size: contain;
   transition: 0.4s ease-in-out;
 }
 
 .card__like:checked ~ .card__like-icon {
   background-image: url(../images/icon/like-button-actived.svg);
+}
+
+@media screen and (max-width: 769px) {
+  .cards {
+    width: 100%;
+  }
 }
