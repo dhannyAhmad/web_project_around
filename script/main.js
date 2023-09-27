@@ -2,62 +2,41 @@
 const editButton = document.querySelector(".profile__edit-button");
 const editProfilePopup = document.querySelector(".popup");
 const closePopupButton = editProfilePopup.querySelector(".popup__close");
-const saveButton = editProfilePopup.querySelector(".popup__submit");
 const nameInput = editProfilePopup.querySelector(".popup__input_name");
 const aboutInput = editProfilePopup.querySelector(".popup__input_about");
 
-// Inisialisasi nilai awal input
-let originalName = nameInput.value;
-let originalAbout = aboutInput.value;
+const saveButton = editProfilePopup.querySelector(".popup__submit");
+const profilName = document.querySelector(".profile__name");
+const profileAbout = document.querySelector(".profile__about");
 
-// listen klik tombol "Edit Profil"
-editButton.addEventListener("click", () => {
-  // Mengisi input dengan data profil yang ada
-  nameInput.value = document.querySelector(".profile__name").textContent;
-  aboutInput.value = document.querySelector(".profile__about").textContent;
-  // Menampilkan popup
-  editProfilePopup.style.display = "block";
+// Fungsi untuk menampilkan popup dan mengisi input dengan data profil yang ada
+function openEditPopup() {
+  nameInput.value = profilName.textContent;
+  aboutInput.value = profileAbout.textContent;
+  editProfilePopup.classList.add("popup_opened");
+  const hasChanged =
+    nameInput.value !== originalName || aboutInput.value !== originalAbout;
+  const inputEmpty = nameInput === "" || aboutInput === "";
+  saveButton.disable = !(hasChanged && !inputEmpty);
+}
 
-  // Mengatur nilai awal
-  originalName = nameInput.value;
-  originalAbout = aboutInput.value;
+// Fungsi untuk menutup popup
+function closeEditPopup() {
+  editProfilePopup.classList.remove("popup_opened");
+}
 
-  // Menonaktifkan tombol "Simpan" saat pertama kali popup muncul
-  saveButton.disabled = true;
-});
+// Fungsi untuk menyimpan perubahan profil
+function saveProfileChanges() {
+  profilName.textContent = nameInput.value;
+  profileAbout.textContent = aboutInput.value;
+  closeEditPopup();
+}
 
-// Mendengarkan perubahan pada input
-nameInput.addEventListener("input", () => {
-  // Memeriksa apakah nilai input telah berubah
-  if (nameInput.value !== originalName || aboutInput.value !== originalAbout) {
-    saveButton.disabled = false; // Aktifkan tombol "Simpan"
-  } else {
-    saveButton.disabled = true; // Nonaktifkan tombol "Simpan"
-  }
-});
-
-aboutInput.addEventListener("input", () => {
-  // Memeriksa apakah nilai input telah berubah
-  if (nameInput.value !== originalName || aboutInput.value !== originalAbout) {
-    saveButton.disabled = false; // Aktifkan tombol "Simpan"
-  } else {
-    saveButton.disabled = true; // Nonaktifkan tombol "Simpan"
-  }
-});
+// Mendengarkan klik tombol "Edit Profil"
+editButton.addEventListener("click", openEditPopup);
 
 // Mendengarkan klik tombol "Tutup"
-closePopupButton.addEventListener("click", () => {
-  // Menutup popup
-  editProfilePopup.style.display = "none";
-});
+closePopupButton.addEventListener("click", closeEditPopup);
 
 // Mendengarkan klik tombol "Simpan"
-saveButton.addEventListener("click", () => {
-  // Mengambil nilai dari input dan memperbarui profil
-  const newName = nameInput.value;
-  const newAbout = aboutInput.value;
-  document.querySelector(".profile__name").textContent = newName;
-  document.querySelector(".profile__about").textContent = newAbout;
-  // Menutup popup
-  editProfilePopup.style.display = "none";
-});
+saveButton.addEventListener("click", saveProfileChanges);
