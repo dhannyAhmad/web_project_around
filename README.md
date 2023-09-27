@@ -12,10 +12,10 @@ Project Feature
   </li>
 </ul>
 
-# <h1>Figma</h1>
+## Figma
 
-<a href="https://www.figma.com/file/89jWb7ipy9wiA4vVDIRKS8/Web_Brief_Sprint_5_ID-%7C-Di-Sekitar-A.S.-%7C-desktop-%2B-mobile?node-id=80%3A219&mode=dev">Design Figma Project</a>
+[Design Figma Project](https://www.figma.com/file/89jWb7ipy9wiA4vVDIRKS8/Web_Brief_Sprint_5_ID-%7C-Di-Sekitar-A.S.-%7C-desktop-%2B-mobile?node-id=0%3A1&mode=dev)
 
-# <h2>Github Page</h2>
+## Github Pages
 
-<a href="https://github.com/dhannyAhmad/web_project_around">Link Github</a>
+[Link to Website](https://github.com/dhannyAhmad/web_project_around)

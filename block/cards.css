@@ -15,18 +15,18 @@
   overflow: hidden;
 }
 
-.card__image {
+.cards__image {
   width: 100%;
 }
 
-.card__group {
+.cards__group {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: auto 15px auto 21px;
 }
 
-.card__title {
+.cards__title {
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
@@ -37,11 +37,11 @@
   overflow: hidden;
 }
 
-.card__like {
+.cards__like {
   display: none;
 }
 
-.card__like-icon {
+.cards__like-icon {
   width: 21px;
   height: 19px;
   background-image: url(../images/icon/like-button.svg);
@@ -52,7 +52,7 @@
   transition: 0.4s ease-in-out;
 }
 
-.card__like:checked ~ .card__like-icon {
+.cards__like:checked ~ .cards__like-icon {
   background-image: url(../images/icon/like-button-actived.svg);
 }
 

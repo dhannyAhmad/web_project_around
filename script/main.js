@@ -14,10 +14,8 @@ function openEditPopup() {
   nameInput.value = profilName.textContent;
   aboutInput.value = profileAbout.textContent;
   editProfilePopup.classList.add("popup_opened");
-  const hasChanged =
-    nameInput.value !== originalName || aboutInput.value !== originalAbout;
-  const inputEmpty = nameInput === "" || aboutInput === "";
-  saveButton.disable = !(hasChanged && !inputEmpty);
+
+  saveButton.disable = true;
 }
 
 // Fungsi untuk menutup popup
@@ -40,3 +38,10 @@ closePopupButton.addEventListener("click", closeEditPopup);
 
 // Mendengarkan klik tombol "Simpan"
 saveButton.addEventListener("click", saveProfileChanges);
+
+submitButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  profilName.textContent = nameInput.value;
+  profileAbout.textContent = aboutInput.value;
+  saveProfileChanges();
+});
