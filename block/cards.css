@@ -47,12 +47,10 @@
   background-image: url(../images/icon/like-button.svg);
   cursor: pointer;
   background-repeat: no-repeat;
-  background-image: cover;
   background-size: contain;
   transition: 0.4s ease-in-out;
 }
-
-.cards__like:checked ~ .cards__like-icon {
+.cards__like-icon:hover {
   background-image: url(../images/icon/like-button-actived.svg);
 }
 
