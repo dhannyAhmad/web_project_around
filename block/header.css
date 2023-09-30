@@ -18,7 +18,7 @@
   opacity: 0.7;
   background: #545454;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   /* Mengubah lebar header pada resolusi kecil */
   .header,
   .header__line {

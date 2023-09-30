@@ -18,4 +18,4 @@ Project Feature
 
 ## Github Pages
 
-[Link to Website](https://github.com/dhannyAhmad/web_project_around)
+[Link to Website](https://dhannyahmad.github.io/web_project_around/)

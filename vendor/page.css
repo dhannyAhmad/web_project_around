@@ -1,3 +1,9 @@
+html {
+  ine-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  display: block;
+}
+
 body {
   background-color: #000;
   margin: auto;
@@ -18,7 +24,7 @@ image {
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   body {
     padding: 1.75rem 4rem 2.25rem;
   }
