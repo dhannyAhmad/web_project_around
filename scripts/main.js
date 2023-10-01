@@ -14,8 +14,6 @@ function openEditPopup() {
   nameInput.value = profilName.textContent;
   aboutInput.value = profileAbout.textContent;
   editProfilePopup.classList.add("popup_opened");
-
-  saveButton.disable = true;
 }
 
 // Fungsi untuk menutup popup
